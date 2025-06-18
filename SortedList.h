@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <iostream>
@@ -107,5 +108,75 @@ namespace mtm {
             this->head = tempHead;
             this->size = tempSize;
 
+            return *this;
+        }
+
+        /**
+         * @brief Insert new element to the list .
+         *
+         * @param value - Value to insert.
+         *
+         * @return Reference to the given list after inserting.
+         */
+        SortedList& insert(const T& value)
+        {
+            Node* toInsert=nullptr;
+            try {
+                toInsert = new Node(value);
+            }
+            catch(std :: bad_alloc& e) {
+                throw e;
+            }
+            if (head == nullptr || value > head->data) {
+                toInsert->next = head;
+                head = toInsert;
+
+            }
+            else {
+                Node* current = head;
+                while (current->next != nullptr && current->next->data > value) {
+                    current = current->next;
+                }
+
+                toInsert->next = current->next;
+                current->next = toInsert;
+            }
+            size++;
+            return *this;
+        }
+
+
+        /**
+         * @brief Remove an element from the list .
+         *
+         * @param rm - ConstIterator which points to the member we want to remove.
+         *
+         * @return Reference to the given list after removing.
+         */
+        SortedList& remove(const ConstIterator& toRemove) {
+            if(!(toRemove != end())) {
+                return *this;
+            }
+            Node* toDelete = nullptr;
+            if(!(toRemove != begin())) {
+                toDelete = head;
+                head = head->next;
+            }
+            else{
+                toDelete = head;
+                while(toDelete->next != toRemove.current && toDelete->next != nullptr)
+                {
+                    toDelete = toDelete->next;
+                }
+                if (toDelete->next == toRemove.current )
+                {
+                    Node* current = toDelete;
+                    toDelete = toDelete->next;
+                    current->next = toDelete->next;
+                }
+            }
+            toDelete->next = nullptr;
+            delete toDelete;
+            size--;
             return *this;
         }
