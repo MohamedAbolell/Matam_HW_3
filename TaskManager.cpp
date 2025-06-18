@@ -33,3 +33,21 @@ void TaskManager:: completeTask(const string &personName){
         }
     }
 }
+void TaskManager:: bumpPriorityByType(TaskType type, int priority){
+    if(priority < 0){
+        return;
+    }
+    SortedList<Task> newList;
+    for(int i=0 ; i < personCount ; i++){
+        newList = this->persons[i].getTasks().apply(
+                [type,priority](const Task& task)->Task{
+                    if(task.getType() == type){
+                        Task newTask(task.getPriority()+priority , task.getType() , task.getDescription());
+                        newTask.setId(task.getId());
+                        return newTask;
+                    }
+                    return task;
+                });
+        this->persons[i].setTasks(newList);
+    }
+}
