@@ -267,7 +267,7 @@ namespace mtm {
         const Node *current;
 
         /**
-         * @brief Constructor to create a ConstIterator object.
+	     * @brief Constructor to create a ConstIterator object.
          *
          * @param Pointer to Node current to set to this Pointer to Node current.
          */
@@ -290,3 +290,45 @@ namespace mtm {
          * @param Reference to other ConstIterator object to assign to this.
          */
         ConstIterator &operator=(const ConstIterator &other) = default;
+
+        /**
+         * @brief Access to the data of the object pointed to by the ConstIterator.
+         *
+         * @return Read-only access to data.
+         *
+         * @throw std::runtime_error in case an attempt is made to access non-existent information.
+         */
+        const T &operator*() const {
+            if (current == nullptr) {
+                throw std::runtime_error("Not data");
+            }
+            return current->data;
+        }
+
+        /**
+         * @brief Promotion to the next member of the list.
+         *
+         * @return Given ConstIterator after Promotion.
+         *
+         * @throw std::out_of_range in case an attempt is made to promote after end of list.
+         */
+        ConstIterator &operator++() {
+            if (current == nullptr) {
+                throw std::out_of_range("End of list");
+            }
+            current = current->next;
+            return *this;
+        }
+
+        /**
+         * @brief Check if two ConstIterator do not point to same list member.
+         *
+         * @param Read-only access to other ConstIterator.
+         *
+         * @return True-if two ConstIterator do not point to same list member. otherwise, false.
+         */
+        bool operator!=(const ConstIterator &other) const {
+            return current != other.current;
+        }
+    };
+}
