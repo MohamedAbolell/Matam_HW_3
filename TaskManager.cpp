@@ -51,3 +51,19 @@ void TaskManager:: bumpPriorityByType(TaskType type, int priority){
         this->persons[i].setTasks(newList);
     }
 }
+void TaskManager:: printAllEmployees() const{
+    for(int i=0 ; i < personCount ; i++){
+        cout << this->persons[i] << endl;
+    }
+}
+void TaskManager:: printAllTasks() const{
+    SortedList<Task> printList;
+    for(int i=0 ; i < personCount ; i++){
+        for(const Task& task: this->persons[i].getTasks()){
+            printList.insert(task);
+        }
+    }
+    for(const Task& task: printList){
+        cout << task << endl;
+    }
+}
