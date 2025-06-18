@@ -33,6 +33,7 @@ void TaskManager:: completeTask(const string &personName){
         }
     }
 }
+// not finished
 void TaskManager:: bumpPriorityByType(TaskType type, int priority){
     if(priority < 0){
         return;
@@ -63,6 +64,18 @@ void TaskManager:: printAllTasks() const{
             printList.insert(task);
         }
     }
+    for(const Task& task: printList){
+        cout << task << endl;
+    }
+}
+void TaskManager:: printTasksByType(TaskType type) const{
+    SortedList<Task> comb;
+    for(int i=0 ; i < personCount ; i++){
+        for(const Task& task: this->persons[i].getTasks()){
+            comb.insert(task);
+        }
+    }
+    SortedList<Task> printList =comb.filter([type](const Task& task){return task.getType() == type;});
     for(const Task& task: printList){
         cout << task << endl;
     }
