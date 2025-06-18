@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <iostream>
@@ -59,3 +58,54 @@ namespace mtm {
          *
          * @param SortedList other to copy.
          */
+        SortedList(const SortedList& other) : head(nullptr), size(other.size){
+            if (other.head == nullptr) {
+                return;
+            }
+
+            try
+            {
+                head = new Node(other.head->data);
+                Node* current = head;
+                Node* otherCurrent = other.head->next;
+                while (otherCurrent != nullptr) {
+                    current->next = new Node(otherCurrent->data);
+                    current = current->next;
+                    otherCurrent = otherCurrent->next;
+                }
+            }
+            catch (std:: bad_alloc &e)
+            {
+                delete head;
+                head = nullptr;
+                throw e;
+            }
+        }
+
+        /**
+         * @brief Copy assignment operator .
+         *
+         * @param other - SortedList to assign.
+         *
+         * @return Reference to the given list after assignment.
+         */
+        SortedList& operator=(const SortedList& other){
+            if (this == &other) {
+                return *this;
+            }
+
+
+            SortedList temp(other);
+
+
+            Node* tempHead = temp.head;
+            int tempSize = temp.size;
+
+            temp.head = this->head;
+            temp.size = this->size;
+
+            this->head = tempHead;
+            this->size = tempSize;
+
+            return *this;
+        }
