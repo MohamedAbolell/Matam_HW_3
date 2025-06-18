@@ -267,10 +267,26 @@ namespace mtm {
         const Node *current;
 
         /**
-	     * @brief Constructor to create a ConstIterator object.
+         * @brief Constructor to create a ConstIterator object.
          *
          * @param Pointer to Node current to set to this Pointer to Node current.
          */
         ConstIterator(const Node *current) : current(current) {}
 
         friend class SortedList<T>;
+
+    public:
+
+        /**
+         * @brief Default copy constructor to create a ConstIterator object.
+         *
+         * @param Reference to other ConstIterator object to copy to this.
+         */
+        ConstIterator(const ConstIterator &other) = default;
+
+        /**
+         * @brief Default assignment operation .
+         *
+         * @param Reference to other ConstIterator object to assign to this.
+         */
+        ConstIterator &operator=(const ConstIterator &other) = default;
