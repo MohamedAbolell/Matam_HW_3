@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <iostream>
@@ -32,24 +33,29 @@ namespace mtm {
         };
         Node* head;
         int size;
-    template <class T>
-    class SortedList<T>::ConstIterator {
-    /**
-     * the class should support the following public interface:
-     * if needed, use =defualt / =delete
-     *
-     * constructors and destructor:
-     * 1. a ctor(or ctors) your implementation needs
-     * 2. copy constructor
-     * 3. operator= - assignment operator
-     * 4. ~ConstIterator() - destructor
-     *
-     * operators:
-     * 5. operator* - returns the element the iterator points to
-     * 6. operator++ - advances the iterator to the next element
-     * 7. operator!= - returns true if the iterator points to a different element
-     *
-     */
-    };
-}
 
+    public:
+        /**
+         * @brief Default constructor to create a SortedList object.
+         */
+        SortedList(): head(nullptr), size(0) {}
+
+        /**
+         * @brief Destructor to delete a SortedList object.
+         */
+        ~SortedList() {
+            if(this->head != nullptr){
+                delete this->head;
+            }
+        }
+
+        /**
+         * @brief Class representing a Const Iterator .
+         */
+        class ConstIterator;
+
+        /**
+         * @brief Copy constructor to create a SortedList object.
+         *
+         * @param SortedList other to copy.
+         */
