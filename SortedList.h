@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <iostream>
@@ -206,3 +207,53 @@ namespace mtm {
         ConstIterator end() const {
             return ConstIterator(nullptr);
         }
+
+        /**
+         * @brief Creates a new list according to a certain condition .
+         *
+         * @param pred - Predicate according to which the members in the list should be filtered.
+         *
+         * @return New SortedList with elements that satisfy a given condition.
+         */
+        template <typename Predicate>
+        SortedList<T> filter(Predicate pred) const {
+            SortedList<T> result;
+            try{
+                for(const T& element : *this){
+                    if(pred(element)){
+                        result.insert(element);
+                    }
+                }
+            }
+            catch(std :: bad_alloc& e){
+                delete result.head;
+                result.head = nullptr;
+                throw e;
+            }
+            return result;
+        }
+
+        /**
+         * @brief Creates a new list according to a certain operation .
+         *
+         * @param op - Operation that is performed on the members of the list.
+         *
+         * @return New SortedList with elements that were modified by an operation.
+         */
+        template <typename Operation>
+        SortedList<T> apply(Operation op) const{
+            SortedList<T> result;
+            try{
+                for(const T& element : *this){
+                    result.insert(op(element));
+                }
+            }
+            catch(std :: bad_alloc& e){
+                delete result.head;
+                result.head = nullptr;
+                throw e;
+            }
+            return result;
+        }
+
+    };
