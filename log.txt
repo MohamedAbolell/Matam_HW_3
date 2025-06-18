@@ -1,0 +1,170 @@
+* commit ef84f56ac32a3930d12879993768b7d979127ef5
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:54:10 2025 +0300
+| 
+|     Dry part
+| 
+|  dry.pdf | Bin 0 -> 26378 bytes
+|  1 file changed, 0 insertions(+), 0 deletions(-)
+| 
+* commit 85c2041a529aab242e79ba57a9025fb5232545a4
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:53:09 2025 +0300
+| 
+|     adding printTasksByType to TaskManager
+| 
+|  TaskManager.cpp | 15 ++++++++++++++-
+|  1 file changed, 14 insertions(+), 1 deletion(-)
+| 
+* commit 5cdc2f3daec2cdea243e8085e953f6b073651fee
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:51:36 2025 +0300
+| 
+|     adding printAllEmployees and printAllTasks functions to TaskManager
+| 
+|  TaskManager.cpp | 16 ++++++++++++++++
+|  1 file changed, 16 insertions(+)
+| 
+* commit 0eaad4445ea6c28cc087c14f3b4c06f1add46df5
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:50:00 2025 +0300
+| 
+|     adding bumpPriorityByType to TaskManager
+| 
+|  .DS_Store       | Bin 6148 -> 6148 bytes
+|  TaskManager.cpp |  20 +++++++++++++++++++-
+|  2 files changed, 19 insertions(+), 1 deletion(-)
+| 
+* commit a472f979f7c98b95b878133c55463e020aea52cd
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:47:58 2025 +0300
+| 
+|     creating TaskManager.cpp with assignTask and completeTask functions
+| 
+|  TaskManager.cpp | 35 +++++++++++++++++++++++++++++++++++
+|  1 file changed, 35 insertions(+)
+| 
+* commit ef5ab77e23bdc1f3e376fb1c9964e583fc569342
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:44:27 2025 +0300
+| 
+|     Adding fields to TaskManager.h
+| 
+|  SortedList.h  | 2 +-
+|  TaskManager.h | 8 ++++++--
+|  2 files changed, 7 insertions(+), 3 deletions(-)
+| 
+* commit 5047c97ca63b091b5cb357b474712b2d36346c54
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:42:38 2025 +0300
+| 
+|      Operator *(), ++(),!= for ,ConstIterator
+| 
+|  SortedList.h | 44 +++++++++++++++++++++++++++++++++++++++++++-
+|  1 file changed, 43 insertions(+), 1 deletion(-)
+| 
+* commit c5a5cc1a998b1adf8b50051a2ad6d113e5afde8b
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:40:47 2025 +0300
+| 
+|     Default copy constructor and assignment operation in ConstIterator
+| 
+|  SortedList.h | 20 ++++++++++++++++++--
+|  1 file changed, 18 insertions(+), 2 deletions(-)
+| 
+* commit cc40b90b300db7f512e87ca452ff0ca7a1e87c83
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:39:42 2025 +0300
+| 
+|     ConstIterator class and fields
+| 
+|  SortedList.h | 17 +++++++++++++++++
+|  1 file changed, 17 insertions(+)
+| 
+* commit 1da44a4e881942c95b1c9429281c472e2f05e0ab
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:37:43 2025 +0300
+| 
+|     Filter, and apply functions
+| 
+|  SortedList.h | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++
+|  1 file changed, 51 insertions(+)
+| 
+* commit e0afd903da211317d06ce55f5b1b5b5a3ef7d65b
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:36:45 2025 +0300
+| 
+|     length, end and begin functions
+| 
+|  SortedList.h | 28 +++++++++++++++++++++++++++-
+|  1 file changed, 27 insertions(+), 1 deletion(-)
+| 
+* commit 8fb7aa24df3fb35f6eba8e827cc58cd7a0ef089f
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:34:53 2025 +0300
+| 
+|     Insert and remove functions In SortedList
+| 
+|  SortedList.h | 71 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|  1 file changed, 71 insertions(+)
+| 
+* commit c1b677dfecdd1b4a0dca419ac375a45c7425b13a
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:33:36 2025 +0300
+| 
+|     Copy constructor and operator= ,in SortedList
+| 
+|  SortedList.h | 52 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+|  1 file changed, 51 insertions(+), 1 deletion(-)
+| 
+* commit dcedad96042759eff0a3a8d1bf8d7ca1bf502160
+| Author: mohamedabolel <mabolel@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:30:22 2025 +0300
+| 
+|     Default constructor and Destructor for SortedList
+| 
+|  .DS_Store                              | Bin 0 -> 6148 bytes
+|  SortedList.h                           |  46 +++++++++++++++++--------------
+|  test1.expected => tests/test1.expected |   0
+|  test2.expected => tests/test2.expected |   0
+|  test3.expected => tests/test3.expected |   0
+|  test4.expected => tests/test4.expected |   0
+|  test5.expected => tests/test5.expected |   0
+|  test6.expected => tests/test6.expected |   0
+|  8 files changed, 26 insertions(+), 20 deletions(-)
+| 
+* commit a1a26c31b598fcbac0753cea1fa571f13950d4c8
+| Author: Onegvaknin <oneg.vaknin@campus.technion.ac.il>
+| Date:   Wed Jun 18 18:28:59 2025 +0300
+| 
+|     Adding fields to SortedList, creating inner class Node with Constructor and a Destructor
+| 
+|  .idea/.gitignore     |   8 +
+|  .idea/Matam_HW_3.iml |   8 +
+|  .idea/editor.xml     | 580 +++++++++++++++++++++++++++++++++++++++++++++++++
+|  .idea/modules.xml    |   8 +
+|  .idea/vcs.xml        |   6 +
+|  SortedList.h         |  50 ++---
+|  6 files changed, 634 insertions(+), 26 deletions(-)
+| 
+* commit d988bbca8a8edd08edcb45adca9be310d89c1b1e
+  Author: Mohamed Abolel <abolelmohamed44@gmail.com>
+  Date:   Wed Jun 18 17:55:13 2025 +0300
+  
+      Adding files
+  
+   Person.cpp     |  51 ++++++
+   Person.h       |  79 +++++++++
+   README.md      |   6 +
+   SortedList.h   |  57 ++++++
+   Task.cpp       |  86 +++++++++
+   Task.h         | 115 ++++++++++++
+   TaskManager.h  |  75 ++++++++
+   main.cpp       | 531 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   test1.expected |   3 +
+   test2.expected |   3 +
+   test3.expected |  30 ++++
+   test4.expected |   3 +
+   test5.expected |   3 +
+   test6.expected |  15 ++
+   14 files changed, 1057 insertions(+)
