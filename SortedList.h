@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <iostream>
@@ -179,4 +178,31 @@ namespace mtm {
             delete toDelete;
             size--;
             return *this;
+        }
+
+        /**
+         * @brief Returns the number of elements in the list.
+         *
+         * @return The size of the list.
+         */
+        int length() const {
+            return size;
+        }
+
+        /**
+         * @brief Points to the first element in the list.
+         *
+         * @return ConstIterator to the head of the list.
+         */
+        ConstIterator begin() const {
+            return ConstIterator(head);
+        }
+
+        /**
+         * @brief Points to the one after the last element in the list.
+         *
+         * @return ConstIterator to nullptr.
+         */
+        ConstIterator end() const {
+            return ConstIterator(nullptr);
         }
