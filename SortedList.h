@@ -257,3 +257,20 @@ namespace mtm {
         }
 
     };
+
+    /**
+     * @brief Class representing a ConstIterator to a SortedList .
+     */
+    template <class T>
+    class SortedList<T>::ConstIterator {
+
+        const Node *current;
+
+        /**
+	     * @brief Constructor to create a ConstIterator object.
+         *
+         * @param Pointer to Node current to set to this Pointer to Node current.
+         */
+        ConstIterator(const Node *current) : current(current) {}
+
+        friend class SortedList<T>;
