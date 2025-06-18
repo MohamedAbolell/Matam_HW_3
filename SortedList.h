@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <iostream>
@@ -267,7 +266,7 @@ namespace mtm {
         const Node *current;
 
         /**
-	     * @brief Constructor to create a ConstIterator object.
+         * @brief Constructor to create a ConstIterator object.
          *
          * @param Pointer to Node current to set to this Pointer to Node current.
          */
